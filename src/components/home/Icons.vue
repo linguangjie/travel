@@ -1,0 +1,16 @@
+<template>
+  <div class="page"></div>
+</template>
+
+<script>
+export default {
+  name: "homeIcons",
+  data() {
+    return {};
+  },
+  components: {}
+};
+</script>
+
+<style scoped lang="stylus">
+</style>
