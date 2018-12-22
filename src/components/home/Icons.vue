@@ -2,11 +2,11 @@
   <div class="icons">
     <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) in pages" :key="index">
-        <div class="icon" v-for="(item,index) in page" :key="index">
+        <div class="icon" v-for="item in page" :key="item.id">
           <div class="icon-img">
-            <img :src="item" class="icon-img-content">
+            <img :src="item.imgUrl" class="icon-img-content">
           </div>
-          <p class="icon-desc">{{item}}</p>
+          <p class="icon-desc">{{item.desc}}</p>
         </div>
       </swiper-slide>
     </swiper>
@@ -16,15 +16,20 @@
 <script>
 export default {
   name: "homeIcons",
+  props: {
+    list: Array
+  },
   data() {
     return {
-      iconList: []
+      swiperOption: {
+        autoPlay: false
+      }
     };
   },
   computed: {
     pages() {
       const pages = [];
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8);
         if (!pages[page]) {
           pages[page] = [];
@@ -33,8 +38,7 @@ export default {
       });
       return pages;
     }
-  },
-  components: {}
+  }
 };
 </script>
 
