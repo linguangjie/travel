@@ -9,21 +9,7 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 截图
+![image](https://github.com/linguangjie/travel/blob/master/img-folder/01.png)
+![image](https://github.com/linguangjie/travel/blob/master/img-folder/02.png)
+![image](https://github.com/linguangjie/travel/blob/master/img-folder/03.png)
